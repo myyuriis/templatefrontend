@@ -6,6 +6,10 @@ import withTracker from "./withTracker";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./shards-dashboard/styles/shards-dashboards.1.1.0.min.css";
+import GetAllUsers from "./network/users/getAllUsers";
+import GetAllProviders from "./network/providers/getAllProviders";
+import GetAllAssets from "./network/assets/getAllAssets";
+import GetAllReviews from "./network/reviews/getAllReviews";
 
 export default () => (
   <Router basename={process.env.REACT_APP_BASENAME || ""}>
@@ -26,6 +30,10 @@ export default () => (
           />
         );
       })}
+      <GetAllUsers/>
+      <GetAllProviders/>
+      <GetAllAssets/>
+      <GetAllReviews/>
     </div>
   </Router>
 );
